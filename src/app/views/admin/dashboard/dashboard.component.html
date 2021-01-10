@@ -1,0 +1,87 @@
+<div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
+  <div class="flex-auto px-4 lg:px-10 py-10 pt-0">
+
+    <h3 class="font-semibold text-base text-gray-800" style="margin-top: 20px;">
+      Configurações do estabelecimento
+    </h3>
+    <div class="flex flex-wrap" style="margin-top: 10px;">
+      <div class="w-full lg:w-6/12 px-4" style="padding-left: 0px !important;">
+        <div class="relative w-full mb-3">
+          <label class="block uppercase text-gray-700 text-xs font-bold mb-2" htmlFor="grid-password">
+            Nome
+          </label>
+          <input [(ngModel)]="config.nome" type="text"
+            class="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full ease-linear transition-all duration-150"
+            />
+        </div>
+      </div>
+
+      <div class="w-full lg:w-6/12 px-4">
+        <div class="relative w-full mb-3">
+          <label class="block uppercase text-gray-700 text-xs font-bold mb-2" htmlFor="grid-password">
+            Whatsapp
+          </label>
+          <input type="text"  [(ngModel)]="config.whatsapp"
+            class="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full ease-linear transition-all duration-150"
+            />
+        </div>
+      </div>
+
+      <div class="w-full lg:w-12 px-4" style="padding: 0px !important;">
+        <div class="relative w-full mb-3">
+          <label class="block uppercase text-gray-700 text-xs font-bold mb-2" htmlFor="grid-password">
+            Cor principal
+          </label>
+          <input [(colorPicker)]="config.color" [style.background]="config.color"
+            class="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full ease-linear transition-all duration-150"
+            />
+        </div>
+      </div>
+
+      <div class="w-full lg:w-6/12 px-4" style="padding-left: 0px !important;">
+        <div class="relative w-full mb-3">
+          <label class="block uppercase text-gray-700 text-xs font-bold mb-2" htmlFor="grid-password">
+            Logo
+          </label>
+          <input type="file" id="file" #userPhoto (change)="onFileSelected($event)" name="image" autocomplete="off"
+            class="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full ease-linear transition-all duration-150" />
+        </div>
+      </div>
+
+      <div class="w-full lg:w-6/12 px-4">
+        <div class="relative w-full mb-3" style="text-align: center;">
+          <img [src]="config.logo" style="width: 80px">
+        </div>
+      </div>
+
+      <div class="w-full lg:w-6/12 px-4" style="padding-left: 0px !important;">
+        <div class="relative w-full mb-3">
+          <label class="block uppercase text-gray-700 text-xs font-bold mb-2" htmlFor="grid-password">
+            Banner
+          </label>
+          <input type="file" id="file2" #userPhoto (change)="onFileSelected2($event)" name="image" autocomplete="off"
+            class="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full ease-linear transition-all duration-150" />
+        </div>
+      </div>
+
+      <div class="w-full lg:w-6/12 px-4" >
+        <div class="relative w-full mb-3" style="text-align: center;">
+          <img [src]="config.banner" style="width: 80%">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="rounded-t mb-0 px-4 py-3 border-0">
+    <div class="flex flex-wrap items-center">
+      <div class="relative w-full px-4 max-w-full flex-grow flex-1">
+        <button
+          class="bg-red-600 text-white active:bg-red-700 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 ease-linear transition-all duration-150"
+          type="button" (click)="salvar()">
+          Salvar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  
+</div>

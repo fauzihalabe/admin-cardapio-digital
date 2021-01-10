@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+.excluirDiv {
+    padding: 5px;
+    background: #441616;
+    border-radius: 5px;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-weight: 700;
+    text-align: center;
+}
+
+.whiteTxt {
+    color: #fff !important
+}
+
+.remover {
+    padding: 5px;
+    border-radius: 5px;
+    background: #441616;
+    margin-left: 10px;
+    font-size: 10px;
+    cursor: pointer;
+}

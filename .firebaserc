@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": ""
+  },
+    "targets": {
+    "": {
+      "hosting": {
+        "": [
+          ""
+        ]
+      }
+    }
+  }
+}
