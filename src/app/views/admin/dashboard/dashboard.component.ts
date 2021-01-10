@@ -58,6 +58,10 @@ export class DashboardComponent implements OnInit {
       )
       .subscribe(url => {
         if (url) {
+          // if(url.state == 'success'){
+          //   this.fb = url;
+          //   this.config.logo = this.fb;
+          // }
           console.log(url);
         }
       });
@@ -79,13 +83,17 @@ export class DashboardComponent implements OnInit {
               //Salva a URL gerada para o arquivo
               if (url) {
                 this.fb2 = url;
-                this.config.banner = this.fb;
+                this.config.banner = this.fb2;
               }
             });
           })
         )
         .subscribe(url => {
           if (url) {
+            // if(url.state == 'success'){
+            //   this.fb2 = url;
+            //   this.config.banner = this.fb2;
+            // }
             console.log(url);
           }
         });
